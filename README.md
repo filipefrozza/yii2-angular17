@@ -39,6 +39,8 @@ ele irá rodar no http://localhost:4300/api
 
 ## Front-End em Angular 17
 
+Antes de iniciar, ter o Node 20 instalado, e o Angular Cli 17
+
 localizado na pasta `/front`
 
 Antes de iniciar o Angular17 precisa rodar a instalação de dependências
