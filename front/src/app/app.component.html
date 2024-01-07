@@ -1,0 +1,17 @@
+<!-- Adicione links de navegação para as páginas do CRUD -->
+<div class="app-box">
+  <div class="app-body">
+    <nav class="app-nav">
+      <a *ngIf="!logged" class="nav-logo" routerLink="/" routerLinkActive="active">xFrozza</a>
+      <a *ngIf="logged" class="nav-logo" routerLink="/books" routerLinkActive="active">xFrozza</a>
+      <a *ngIf="logged" class="nav-link" routerLink="/books" routerLinkActive="active">List</a>
+      <a *ngIf="logged" class="nav-link" routerLink="/books/create" routerLinkActive="active">Create</a>
+      <span class="nav-sair">
+        <a *ngIf="logged" class="nav-link" routerLink="/auth/logout" routerLinkActive="active">Logout</a>
+      </span>
+    </nav>
+    <div class="app-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="app-space">
+    <h2>Lista de Livros</h2>
+    <div *ngIf="!noBooks">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Título</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Páginas</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+            <th scope="row">{{ book.id }}</th>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.pages }}</td>
+            <td>
+              <button class="btn btn-sm btn-primary btn-action" (click)="seeDetails(book.id)"><mat-icon fontIcon="visibility"></mat-icon></button>
+              <button class="btn btn-sm btn-primary btn-action" (click)="editBook(book.id)"><mat-icon fontIcon="edit"></mat-icon></button>
+              <button class="btn btn-sm btn-danger btn-action" (click)="removeBook(book.id)"><mat-icon fontIcon="delete"></mat-icon></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div *ngIf="loaded">
+      <div *ngIf="noBooks">
+        <p>No book found.</p>
+      </div>
+    </div>
+    <div *ngIf="!loaded">
+      <p>Loading</p>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="app-space">
+    <form (submit)="saveBook()">
+        
+        <div class="form-group mt-2">
+            <label>Title:</label>
+            <input class="form-control" [(ngModel)]="book.title" name="title" type="text" placeholder="Title" required>
+        </div>
+        
+        <div class="form-group mt-2">
+            <label>Description:</label>
+            <input class="form-control" [(ngModel)]="book.description" name="description" type="text" placeholder="Description" required>
+        </div>
+        
+        <div class="form-group mt-2">
+            <label>Author:</label>
+            <input class="form-control" [(ngModel)]="book.author" name="author" type="text" placeholder="Author" required>
+        </div>
+        
+        <div class="form-group mt-2">
+            <label>Pages:</label>
+            <input class="form-control" [(ngModel)]="book.pages" name="pages" type="number" placeholder="Pages" required>
+        </div>
+        
+        <div class="form-group mt-3 text-center">
+            <button class="btn btn-primary" type="submit">{{ editMode ? 'Update' : 'Create' }}</button>
+        </div>
+    </form>
+</div>
