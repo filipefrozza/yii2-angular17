@@ -35,7 +35,7 @@ e após isso para rodar o servidor basta executar o código:
 
     php yii serve --port=4300
 
-ele irá rodar no http://localhost:4300
+ele irá rodar no http://localhost:4300/api
 
 ## Front-End em Angular 17
 
