@@ -28,7 +28,7 @@ localizado na pasta `/back`
 
 Antes de iniciar o Yii2, primeiro precisa rodar o composer e o migrate
 
-    php composer install
+    composer install
 	php yii migrate
 
 e após isso para rodar o servidor basta executar o código:
