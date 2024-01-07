@@ -42,5 +42,4 @@ export class BooksService {
     return this.http.delete<any>(`${this.apiUrl}/book/${book.id}`, {observe: 'response', headers: this.headers});
   }
 
-  // Implementar métodos para excluir e obter detalhes se necessário
 }
