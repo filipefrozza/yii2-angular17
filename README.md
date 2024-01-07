@@ -2,22 +2,22 @@
 
 Funcionalidades:
 
-1) Tela de Login
+Tela de Login
 • A tela inicial deve ser a de login;
 • Não deve ser possível acessar outras telas sem realizar o login;
 
-2) CRUD de Livros
+CRUD de Livros
 • Listagem de livros com paginação e filtragem;
 • Adição e Edição de Livros;
 o Dados do Livro
-:fa-book: Título;
-:fa-book: Descrição;
-:fa-book: Autor;
-:fa-book: Número de Páginas;
-:fa-book: Data de Cadastro;
+	Título;
+	Descrição;
+	Autor;
+	Número de Páginas;
+	Data de Cadastro;
 • Exclusão de um livro.
 
-3) Clima da região
+Clima da região
 • Integração com API externa para exibir o clima de uma determinada região;
 • Mostrar apenas o Clima atual.
 o API https://hgbrasil.com/status/weather. Consultar documentação https://console.hgbrasil.com/documentation/weather.
