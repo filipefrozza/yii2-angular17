@@ -1,0 +1,9 @@
+<div class="app-weather" *ngIf="weather">
+    <div class="weather-icon">
+        <img [src]="condition" />
+    </div>
+    <div class="weather-moon">
+        <img [src]="moon" />
+    </div>
+    <div class="weather-city">{{ weather.city }} {{ weather.temp }}°C</div>
+</div>

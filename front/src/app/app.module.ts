@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShowWeatherComponent } from './weather/show/show.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BooksDetailComponent,
     BooksRegisterComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ShowWeatherComponent
   ],
   imports: [
     BrowserModule,

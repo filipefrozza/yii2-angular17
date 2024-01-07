@@ -89,7 +89,7 @@ app-root {
     font-size: 18px;
 }
 
-.livro-title h2 {
+.book-title h2 {
     text-align: center;
     padding: 15px 10px;
     background-color: #303F9F;
@@ -100,7 +100,7 @@ app-root {
     margin: 0;
 }
 
-.livro-title h4 {
+.book-title h4 {
     text-align: right;
     padding: 15px 10px;
     background-color: #212121;
@@ -110,15 +110,15 @@ app-root {
     margin: 0;
 }
 
-.livro-details {
+.book-details {
     padding: 15px;
 }
 
-.livro-description {
+.book-description {
     text-align: justify;
 }
 
-.livro-pages {
+.book-pages {
     text-align: right;
     font-size: 20px;
 }
@@ -135,6 +135,30 @@ app-root {
 
 .app-space{
     padding: 15px;
+}
+
+app-weather {
+    display: block;
+    width: 300px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.weather-icon {
+    float: left;
+    width: 49%;
+}
+
+.weather-moon {
+    float: right;
+    width: 49%;
+}
+
+.weather-city{
+    clear: both;
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
 }
 
 /*

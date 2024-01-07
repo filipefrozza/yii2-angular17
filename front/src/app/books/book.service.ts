@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,7 @@ export class BooksService {
   private token = '';
   private headers = new HttpHeaders();
   
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private cookieService: CookieService) {
     this.token = this.getToken();
     if (this.token) {
       this.headers = this.headers.append('Authorization', `Bearer ${this.token}`);
@@ -18,7 +19,7 @@ export class BooksService {
   }
   
   getToken(): any{
-    return localStorage.getItem('token');
+    return this.cookieService.get('token');
   }
 
   getBooks(): Observable<any[]> {

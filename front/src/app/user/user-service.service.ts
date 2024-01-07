@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:4300/api'; // Substitua pela URL real da sua API
+  private apiUrl = 'http://localhost:4300/api';
   private token:any = '';
   
   constructor(private http: HttpClient) {
@@ -17,7 +17,7 @@ export class UserService {
     return this.http.post(`${this.apiUrl}/auth/login`, user, {observe: 'response'});
   }
   
-  isAuthenticated(token: any): Promise<boolean>|boolean{
+  isAuthenticated(token: any): boolean{
     return token!=''?true:false;
     
     // return new Promise((resolve, reject) => {

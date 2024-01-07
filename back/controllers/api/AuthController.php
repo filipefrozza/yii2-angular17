@@ -25,7 +25,7 @@ class AuthController extends Controller
             ],
             'authenticator' => [
                 'class' => HttpBearerAuth::class,
-                'except' => ['index'], // Deixe a ação de login desprotegida
+                'except' => ['index', 'weather'], // Deixe a ação de login desprotegida
             ],
             'corsFilter' => [
                 'class' => \yii\filters\Cors::class,
@@ -81,6 +81,22 @@ class AuthController extends Controller
     public function actionCheck()
     {
         return [];
+    }
+    
+    public function actionWeather()
+    {
+        $ch = curl_init('https://api.hgbrasil.com/weather?key=SUA-CHAVE&user_ip=remote');
+
+        curl_setopt_array($ch, [
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_RETURNTRANSFER => 1,
+        ]);
+
+        $resposta = json_decode(curl_exec($ch), true);
+        
+        curl_close($ch);
+        
+        return $resposta;
     }
 
     private function generateJwtToken($user)
