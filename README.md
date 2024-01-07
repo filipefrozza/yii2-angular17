@@ -24,6 +24,8 @@ o API https://hgbrasil.com/status/weather. Consultar documentação https://cons
 
 ## Back-End em Yii2
 
+Criar um database no seu banco com o nome yii2angular17
+
 localizado na pasta `/back`
 
 Antes de iniciar o Yii2, primeiro precisa rodar o composer e o migrate
