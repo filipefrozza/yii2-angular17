@@ -83,22 +83,31 @@ class AuthController extends Controller
         return [];
     }
     
+    /**
+     * Retrieves weather data from the HGBrasil API.
+     *
+     * @return array The weather data from the API.
+     */
     public function actionWeather()
     {
-        $ch = curl_init('https://api.hgbrasil.com/weather?key=SUA-CHAVE&user_ip=remote');
-
+        $url = 'https://api.hgbrasil.com/weather?key=SUA-CHAVE&user_ip=remote';
+        $ch = curl_init($url);
         curl_setopt_array($ch, [
             CURLOPT_CUSTOMREQUEST => 'GET',
-            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_RETURNTRANSFER => true,
         ]);
-
-        $resposta = json_decode(curl_exec($ch), true);
-        
+        $response = json_decode(curl_exec($ch), true);
         curl_close($ch);
-        
-        return $resposta;
+        return $response;
     }
 
+    /**
+     * Generate a JWT token for the given user.
+     *
+     * @param datatype $user description of the user parameter
+     * @throws Some_Exception_Class description of exception
+     * @return Some_Return_Value
+     */
     private function generateJwtToken($user)
     {
         $key = 'rTrNoA1fYpsJRorFzdm-0eWMZmCHH_xO'; // Substitua com uma chave secreta forte

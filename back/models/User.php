@@ -14,15 +14,21 @@ class User extends ActiveRecord implements IdentityInterface
 
     public function __construct(){
         parent::__construct();
-        // CREATE TABLE
-        
     }
     
+    /**
+     * Get the name of the database table associated with the model.
+     *
+     * @return string
+     */
     public static function tableName()
     {
         return 'user';
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function beforeSave($insert)
     {
         if (parent::beforeSave($insert)) {
@@ -106,6 +112,11 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->password === $password;
     }
     
+    /**
+     * Returns the rules for validation.
+     *
+     * @return array the validation rules
+     */
     public function rules()
 
     {
@@ -119,6 +130,11 @@ class User extends ActiveRecord implements IdentityInterface
 
     }
     
+    /**
+     * Return the database fields as an associative array.
+     *
+     * @return array
+     */
     public static function dbFields()
     {
         return [
